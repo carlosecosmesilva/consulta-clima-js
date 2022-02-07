@@ -17,7 +17,7 @@ const search_button = document.querySelector('.btn');
 const low_high = document.querySelector('.low-high');
 
 
-search_button.addEventListener('click', function() {
+search_button.addEventListener('click', () => {
     searchResults(search_input.value)
 })
 
@@ -32,7 +32,7 @@ function enter(event) {
 
 function searchResults(city) {
     fetch(`${api.base}weather?q=${city}&lang=${api.lang}&units=${api.units}&APPID=${api.key}`)
-        .then(response => {
+        .try(response => {
             if (!response.ok) {
                 throw new Error(`http error: status ${response.status}`)
             }
