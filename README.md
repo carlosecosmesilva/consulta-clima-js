@@ -4,7 +4,7 @@ Esse site foi desenvolvido para testar meus conhecimentos de como utilizar e con
 
 ### Links
 
-- Ainda a ser disponibilizado
+- Acesse o site aqui: [Link](https://quizzical-jackson-e3bd5c.netlify.app/)
 
 ## Processo de construção
 
