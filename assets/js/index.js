@@ -1,6 +1,6 @@
 const api = {
-    key: 'c0d852d414055b6691d08ad03032820e',
-    base: 'http://api.openweathermap.org/data/2.5/',
+    key: '655b1a736912dd1b3cc070d9fc9aafdf',
+    base: 'https://api.openweathermap.org/data/2.5/',
     lang: 'pt_br',
     units: 'metric'
 }
@@ -17,11 +17,11 @@ const search_button = document.querySelector('.btn');
 const low_high = document.querySelector('.low-high');
 
 
-search_button.addEventListener('click', () => {
+search_button.addEventListener('click', function() {
     searchResults(search_input.value)
-})
+});
 
-search_input.addEventListener('keypress', enter)
+search_input.addEventListener('keypress', enter);
 
 function enter(event) {
     key = event.keyCode
@@ -32,7 +32,7 @@ function enter(event) {
 
 function searchResults(city) {
     fetch(`${api.base}weather?q=${city}&lang=${api.lang}&units=${api.units}&APPID=${api.key}`)
-        .try(response => {
+        .then(response => {
             if (!response.ok) {
                 throw new Error(`http error: status ${response.status}`)
             }
